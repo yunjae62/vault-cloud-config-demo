@@ -1,3 +1,8 @@
 spring:
   application:
-    name: vault-demo
+    name: config-client
+  config:
+    import: "configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888
