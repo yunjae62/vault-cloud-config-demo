@@ -15,3 +15,9 @@ spring:
       kv:
         enabled: true
         backend: secret
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
