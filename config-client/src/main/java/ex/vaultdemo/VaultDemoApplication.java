@@ -13,9 +13,13 @@ public class VaultDemoApplication {
     @Value("${message}")
     private String message;
 
+    @Value("${foo}")
+    private String foo;
+
     @PostConstruct
     void init() {
-        log.info("message from Spring cloud config:{} ", message);
+        log.info("message from Spring cloud config: {}", message);
+        log.info("foo from vault: {}", foo);
     }
 
     static void main(String[] args) {
